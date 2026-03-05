@@ -14,43 +14,64 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Header -->
   <header class="header" id="header">
     <div class="container">
-      <p>Шапка (в разработке)</p>
+      <div class="header-inner">
+        <a href="#" class="header-logo"><img src="img/logo.svg" alt="Большой Дом"></a>
+        <div class="header-center">
+          <a href="mailto:info@bighouse.ru" class="header-email"><i class="bi bi-envelope"></i> info@bighouse.ru</a>
+        </div>
+        <div class="header-right">
+          <button class="btn-brand btn-brand-sm">
+            <i class="bi bi-telephone me-1"></i>
+            <span class="d-none d-sm-inline">Обратная связь</span>
+            <span class="d-sm-none">Связаться</span>
+          </button>
+        </div>
+      </div>
     </div>
   </header>
+  <!-- Hero -->
   <section class="hero" id="home">
     <div class="container">
-      <h1>Большой Дом</h1>
-      <p>Главный экран (в разработке)</p>
+      <div class="row align-items-center">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <div class="hero-content">
+            <h1><span class="brand-name">Большой дом</span> — динамичная многопрофильная проектно-строительная компания</h1>
+            <p class="hero-subtitle">Работаем в следующих секторах:</p>
+            <div class="hero-sectors">
+              <span class="sector-tag">Технический</span>
+              <span class="sector-tag">Жилой</span>
+              <span class="sector-tag">Коммерческий</span>
+            </div>
+            <div class="hero-buttons">
+              <a href="#contact" class="btn-brand"><i class="bi bi-pencil-square me-1"></i> Оставить заявку</a>
+              <a href="#about" class="btn-brand-outline">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-md-block">
+          <div class="phone-wrapper">
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <div class="phone-notch"></div>
+                <div class="phone-app-icon">🏠</div>
+                <div class="phone-app-title">Большой Дом</div>
+                <div class="phone-app-desc">Управление проектом<br>строительства</div>
+                <div class="phone-app-btn">Открыть проект</div>
+                <div class="phone-nav">
+                  <div class="phone-nav-dot active"></div>
+                  <div class="phone-nav-dot"></div>
+                  <div class="phone-nav-dot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  <section id="about">
-    <div class="container">
-      <p>О нас (в разработке)</p>
-    </div>
-  </section>
-  <section id="projects">
-    <div class="container">
-      <p>Проекты (в разработке)</p>
-    </div>
-  </section>
-  <section id="career">
-    <div class="container">
-      <p>Карьера (в разработке)</p>
-    </div>
-  </section>
-  <section id="contact">
-    <div class="container">
-      <p>Контакты (в разработке)</p>
-    </div>
-  </section>
-  <footer class="footer">
-    <div class="container">
-      <p>© 2026 Большой Дом</p>
-    </div>
-  </footer>
-  
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
