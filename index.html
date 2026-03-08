@@ -25,7 +25,7 @@
           <a href="mailto:info@bighouse.ru" class="header-email"><i class="bi bi-envelope"></i> info@bighouse.ru</a>
         </div>
         <div class="header-right">
-          <button class="btn-brand btn-brand-sm">
+          <button class="btn-brand btn-brand-sm" data-bs-toggle="modal" data-bs-target="#feedbackModal">
             <i class="bi bi-telephone me-1"></i>
             <span class="d-none d-sm-inline">Обратная связь</span>
             <span class="d-sm-none">Связаться</span>
@@ -53,21 +53,21 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-5 d-none d-md-block">
+        <div class="col-lg-5 my-5">
           <div class="phone-wrapper">
             <div class="phone-mockup">
-              <div class="phone-screen">
+              <a class="phone-screen" href="https://play.google.com/">
                 <div class="phone-notch"></div>
                 <div class="phone-app-icon">🏠</div>
                 <div class="phone-app-title">Большой Дом</div>
-                <div class="phone-app-desc">Управление проектом<br>строительства</div>
+                <div class="phone-app-desc">Отслеживангие Вашего<br>строительства<br>в нашем приложении</div>
                 <div class="phone-app-btn">Открыть проект</div>
                 <div class="phone-nav">
                   <div class="phone-nav-dot active"></div>
                   <div class="phone-nav-dot"></div>
                   <div class="phone-nav-dot"></div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -111,6 +111,24 @@
       </div>
     </div>
   </section>
+  <!-- Под ключ -->
+  <section class="turnkey-section">
+    <div class="container">
+      <h2>Мы выполним весь комплекс работ под ключ — от фундамента до внутренней отделки помещений</h2>
+      <a href="#contact" class="btn-brand-white">Оставить заявку</a>
+      <div class="turnkey-steps">
+        <div class="turnkey-step"><div class="turnkey-step-num">1</div><div class="turnkey-step-label">Фундамент</div></div>
+        <div class="turnkey-connector">→</div>
+        <div class="turnkey-step"><div class="turnkey-step-num">2</div><div class="turnkey-step-label">Каркас</div></div>
+        <div class="turnkey-connector">→</div>
+        <div class="turnkey-step"><div class="turnkey-step-num">3</div><div class="turnkey-step-label">Коммуникации</div></div>
+        <div class="turnkey-connector">→</div>
+        <div class="turnkey-step"><div class="turnkey-step-num">4</div><div class="turnkey-step-label">Кровля</div></div>
+        <div class="turnkey-connector">→</div>
+        <div class="turnkey-step"><div class="turnkey-step-num">5</div><div class="turnkey-step-label">Отделка</div></div>
+      </div>
+    </div>
+  </section>
   <!-- Карьера -->
   <section class="career-section" id="career">
     <div class="container">
@@ -127,6 +145,61 @@
       </div>
     </div>
   </section>
+  <!-- Форма и контакты -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <div class="col-lg-6">
+          <h2 class="section-title">Свяжитесь с нами</h2>
+          <p class="section-subtitle mb-4">Оставьте заявку и мы перезвоним вам в ближайшее время.</p>
+          <div class="contact-form-card">
+            <div class="form-group"><label class="form-label-brand">Ваше имя</label><input type="text" class="form-control-brand" id="userName" placeholder="Иван Иванов" required></div>
+            <div class="form-group"><label class="form-label-brand">Email</label><input type="email" class="form-control-brand" id="userEmail" placeholder="example@mail.ru" required></div>
+            <div class="form-group"><label class="form-label-brand">Номер телефона</label><input type="tel" class="form-control-brand" id="userPhone" placeholder="+7 (___) ___-__-__" required></div>
+            <button type="button" class="btn-brand w-100" id="submitBtn" onclick="sendEmail()"><i class="bi bi-send me-1"></i> Отправить заявку</button>
+            <div id="formStatus" class="text-center mt-3" style="font-size: 14px;"></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-info-block">
+            <h3 class="contact-info-title">Контактная информация</h3>
+            <div class="contact-info-item"><div class="contact-info-icon"><i class="bi bi-envelope"></i></div><div><strong>Email</strong><span><a href="mailto:info@bighouse.ru">info@bighouse.ru</a></span></div></div>
+            <div class="contact-info-item"><div class="contact-info-icon"><i class="bi bi-telephone"></i></div><div><strong>Телефон</strong><span><a href="tel:+78121112233">+7 (812) 111-22-33</a></span></div></div>
+            <div class="contact-info-item"><div class="contact-info-icon"><i class="bi bi-geo-alt"></i></div><div><strong>Юридический адрес</strong><span>Россия, 191186, Санкт-Петербург,<br>ул. Большая Морская, 18</span></div></div>
+            <div class="contact-info-item"><div class="contact-info-icon"><i class="bi bi-clock"></i></div><div><strong>Режим работы</strong><span>Пн — Пт: 9:00 — 18:00</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Карта -->
+  <section class="map-section" id="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.8!2d30.3141!3d59.9339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32db1e1b8!2z0YPQuy4g0JHQvtC70YzRiNCw0Y8g0JzQvtGA0YHQutCw0Y8sIDE4!5e0!3m2!1sru!2sru!4v1700000000000!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта офиса"></iframe>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6"><div class="footer-logo"><img src="img/logo.svg" alt="Большой Дом" class="footer-logo-img"></div><p>Динамичная многопрофильная проектно-строительная компания. Строим загородные коттеджи под ключ с 2010 года.</p></div>
+        <div class="col-lg-4 col-md-6"><h5>Контакты</h5><p><i class="bi bi-envelope me-2"></i><a href="mailto:info@bighouse.ru">info@bighouse.ru</a><br><i class="bi bi-telephone me-2"></i><a href="tel:+78121112233">+7 (812) 111-22-33</a><br><i class="bi bi-geo-alt me-2"></i>Санкт-Петербург, ул. Большая Морская, 18</p></div>
+        <div class="col-lg-4 col-md-6"><h5>Навигация</h5><p><a href="#home">Главная</a><br><a href="#about">О нас</a><br><a href="#projects">Проекты</a><br><a href="#career">Карьера</a><br><a href="#contact">Контакты</a></p></div>
+      </div>
+      <div class="footer-bottom">© 2026 Большой Дом. Все права защищены.</div>
+    </div>
+  </footer>
+  <!-- Модальное окно -->
+  <div class="modal fade" id="feedbackModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title"><i class="bi bi-chat-dots me-2" style="color:#2E7D32;"></i>Обратная связь</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button></div>
+      <div class="modal-body">
+        <div class="form-group"><label class="form-label-brand">Ваше имя</label><input type="text" class="form-control-brand" id="modalName" placeholder="Иван Иванов"></div>
+        <div class="form-group"><label class="form-label-brand">Email</label><input type="email" class="form-control-brand" id="modalEmail" placeholder="example@mail.ru"></div>
+        <div class="form-group"><label class="form-label-brand">Номер телефона</label><input type="tel" class="form-control-brand" id="modalPhone" placeholder="+7 (___) ___-__-__"></div>
+        <button type="button" class="btn-brand w-100" onclick="sendModalEmail()"><i class="bi bi-send me-1"></i> Отправить</button>
+        <div id="modalFormStatus" class="text-center mt-3" style="font-size: 14px;"></div>
+      </div>
+    </div></div>
+  </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
