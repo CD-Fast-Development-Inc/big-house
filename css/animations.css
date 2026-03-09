@@ -1,0 +1,249 @@
+/* Появление снизу */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Появление справа */
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Пульсация кнопки */
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 4px 15px rgba(46, 125, 50, 0.25); }
+  50%      { box-shadow: 0 4px 25px rgba(46, 125, 50, 0.45); }
+}
+
+/* Парящий эффект телефона */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+
+/* Покачивание иконок */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25%      { transform: rotate(-5deg); }
+  75%      { transform: rotate(5deg); }
+}
+
+/* Подёргивание стрелок */
+@keyframes arrowBounce {
+  0%, 100% { transform: translateX(0); }
+  50%      { transform: translateX(4px); }
+}
+
+/* Hero — последовательное появление элементов */
+.hero h1 {
+  animation: fadeInUp 0.8s ease-out both;
+  animation-delay: 0.1s;
+}
+
+.hero-subtitle {
+  animation: fadeInUp 0.8s ease-out both;
+  animation-delay: 0.3s;
+}
+
+.hero-sectors {
+  animation: fadeInUp 0.8s ease-out both;
+  animation-delay: 0.5s;
+}
+
+.hero-buttons {
+  animation: fadeInUp 0.8s ease-out both;
+  animation-delay: 0.7s;
+}
+
+.phone-mockup {
+  animation: fadeInRight 1s ease-out both, float 4s ease-in-out 1.5s infinite;
+  animation-delay: 0.4s;
+}
+
+/* Header — плавное появление */
+.header {
+  animation: fadeInUp 0.6s ease-out both;
+  transition: box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+/* Hover — карточки услуг */
+.service-card {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(46, 125, 50, 0.15);
+}
+
+.service-icon {
+  transition: transform 0.4s ease, background-color 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: rotateY(180deg);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Hover — слайды проектов */
+.project-image {
+  transition: transform 0.5s ease;
+  overflow: hidden;
+}
+
+.project-slide:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* Пульсация главной кнопки */
+.btn-brand {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hero-buttons .btn-brand {
+  animation: pulse 3s ease-in-out 2s infinite;
+}
+
+.hero-buttons .btn-brand:hover {
+  animation: none;
+}
+
+/* Hover — кнопки */
+.btn-brand:hover,
+.btn-brand-outline:hover,
+.btn-brand-white:hover {
+  transform: translateY(-3px);
+}
+
+.btn-brand:active,
+.btn-brand-outline:active,
+.btn-brand-white:active {
+  transform: translateY(0);
+}
+
+/* Hover — ссылки в футере */
+.footer a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.footer a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.footer a:hover::after {
+  width: 100%;
+}
+
+/* Hover — контактные иконки */
+.contact-info-icon {
+  transition: background-color 0.3s ease;
+}
+
+.contact-info-item:hover .contact-info-icon {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  animation: wiggle 0.4s ease;
+}
+
+/* Hover — шаги "под ключ" */
+.turnkey-step-num {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.turnkey-step:hover .turnkey-step-num {
+  transform: scale(1.15);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.turnkey-connector {
+  animation: arrowBounce 2s ease-in-out infinite;
+}
+
+/* Фокус — поля формы */
+.form-control-brand {
+  transition: border-color 0.3s ease,
+              background-color 0.3s ease,
+              box-shadow 0.3s ease,
+              transform 0.2s ease;
+}
+
+.form-control-brand:focus {
+  transform: translateY(-1px);
+}
+
+/* Состояние загрузки кнопки */
+.btn-brand[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Настройки AOS */
+[data-aos] {
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Кнопка наверх */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease, background-color 0.3s ease;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+}
+
+/* Отключение анимаций для тех, кто их выключил в ОС */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
