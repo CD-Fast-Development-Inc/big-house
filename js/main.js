@@ -4,6 +4,10 @@
 })();
 
 document.addEventListener('DOMContentLoaded', function () {
+
+  // Инициализация AOS
+  AOS.init({ once: true, duration: 700, offset: 80, easing: 'ease-out-cubic' });
+  
   // Инициализация Swiper
   var projectsSwiper = new Swiper('.projectsSwiper', {
     slidesPerView: 1, spaceBetween: 24, loop: true,

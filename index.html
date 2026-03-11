@@ -13,6 +13,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <!-- Swiper CSS -->
   <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/animations.css" rel="stylesheet">
 </head>
@@ -80,25 +82,25 @@
     <div class="container">
       <div class="row align-items-center g-4 g-lg-5 mb-5">
         <div class="col-lg-7">
-          <h2 class="section-title">О нас</h2>
-          <p class="about-text">Большой дом стремится выполнять высококачественные, экономичные и своевременные проекты, которые постоянно превышают стандарты и гарантируют исключительную удовлетворенность клиентов. Мы стремимся обеспечить отличное качество и инновационные строительные решения. Наш совместный подход является ключом к нашему успеху, и наши проекты демонстрируют навыки и талант нашей команды во всех сферах нашей деятельности.</p>
+          <h2 class="section-title" data-aos="fade-right" data-aos-duration="700">О нас</h2>
+          <p class="about-text" data-aos="fade-right" data-aos-duration="700" data-aos-delay="100">Большой дом стремится выполнять высококачественные, экономичные и своевременные проекты, которые постоянно превышают стандарты и гарантируют исключительную удовлетворенность клиентов. Мы стремимся обеспечить отличное качество и инновационные строительные решения. Наш совместный подход является ключом к нашему успеху, и наши проекты демонстрируют навыки и талант нашей команды во всех сферах нашей деятельности.</p>
         </div>
-        <div class="col-lg-5">
+          <div class="col-lg-5" data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
           <div class="about-image"><img src="img/about.jpg" alt="Строительство загородного дома" class="about-img"></div>
         </div>
       </div>
       <div class="row g-4">
-        <div class="col-lg-4 col-md-6"><div class="service-card"><div class="service-icon"><i class="bi bi-rulers"></i></div><h4>Проектирование</h4><p>Разработка проектной документации с учётом всех строительных стандартов и норм</p></div></div>
-        <div class="col-lg-4 col-md-6"><div class="service-card"><div class="service-icon"><i class="bi bi-building"></i></div><h4>Строительство</h4><p>Возведение загородных коттеджей из современных экологичных материалов</p></div></div>
-        <div class="col-lg-4 col-md-6"><div class="service-card"><div class="service-icon"><i class="bi bi-palette"></i></div><h4>Отделка</h4><p>Внутренняя и наружная отделка помещений с индивидуальным дизайн-проектом</p></div></div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="600"><div class="service-card"><div class="service-icon"><i class="bi bi-rulers"></i></div><h4>Проектирование</h4><p>Разработка проектной документации с учётом всех строительных стандартов и норм</p></div></div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150"><div class="service-card"><div class="service-icon"><i class="bi bi-building"></i></div><h4>Строительство</h4><p>Возведение загородных коттеджей из современных экологичных материалов</p></div></div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300"><div class="service-card"><div class="service-icon"><i class="bi bi-palette"></i></div><h4>Отделка</h4><p>Внутренняя и наружная отделка помещений с индивидуальным дизайн-проектом</p></div></div>
       </div>
     </div>
   </section>
   <!-- Слайдер проектов -->
   <section class="projects-section" id="projects">
     <div class="container">
-      <h2 class="section-title mb-4">Наши проекты</h2>
-      <div class="swiper projectsSwiper">
+      <h2 class="section-title mb-4" data-aos="fade-right" data-aos-duration="700">Наши проекты</h2>
+      <div class="swiper projectsSwiper" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><div class="project-slide"><div class="project-image" style="background-image: url('img/project-1.jpg');"></div><div class="project-info"><h5>Коттедж «Сосновый бор»</h5><p>Двухэтажный коттедж, 180 м². Клееный брус, панорамные окна.</p></div></div></div>
           <div class="swiper-slide"><div class="project-slide"><div class="project-image" style="background-image: url('img/project-2.jpg');"></div><div class="project-info"><h5>Дом «Озёрный»</h5><p>Каркасный дом, 120 м². Скандинавский стиль, терраса с видом.</p></div></div></div>
@@ -115,9 +117,9 @@
   <!-- Под ключ -->
   <section class="turnkey-section">
     <div class="container">
-      <h2>Мы выполним весь комплекс работ под ключ — от фундамента до внутренней отделки помещений</h2>
-      <a href="#contact" class="btn-brand-white">Оставить заявку</a>
-      <div class="turnkey-steps">
+      <h2 data-aos="zoom-in" data-aos-duration="700">Мы выполним весь комплекс работ под ключ — от фундамента до внутренней отделки помещений</h2>
+      <a href="#contact" class="btn-brand-white" data-aos="fade-up" data-aos-delay="200">Оставить заявку</a>
+      <div class="turnkey-steps" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
         <div class="turnkey-step"><div class="turnkey-step-num">1</div><div class="turnkey-step-label">Фундамент</div></div>
         <div class="turnkey-connector">→</div>
         <div class="turnkey-step"><div class="turnkey-step-num">2</div><div class="turnkey-step-label">Каркас</div></div>
@@ -135,12 +137,12 @@
     <div class="container">
       <div class="row align-items-stretch g-4 g-lg-5">
         <div class="col-lg-7">
-          <h2 class="section-title">Карьера</h2>
-          <p class="career-text mb-3">Большой дом создает среду, которая поощряет совместный подход в сочетании с профессиональным ростом. У нас работают талантливые и целеустремленные, те, кто может доказать, что они работают по собственной инициативе в прогрессивной и сложной среде, и те, у кого есть необходимые навыки и опыт, чтобы использовать успех нашей процветающей компании.</p>
+          <h2 class="section-title" data-aos="fade-right" data-aos-duration="700">Карьера</h2>
+          <p class="career-text mb-3" data-aos="fade-right" data-aos-duration="700" data-aos-delay="100">Большой дом создает среду, которая поощряет совместный подход в сочетании с профессиональным ростом. У нас работают талантливые и целеустремленные, те, кто может доказать, что они работают по собственной инициативе в прогрессивной и сложной среде, и те, у кого есть необходимые навыки и опыт, чтобы использовать успех нашей процветающей компании.</p>
           <p class="career-text mb-3">Мы признаем, что наши сотрудники являются нашим самым большим достоянием, и наша цель — предоставить им наилучшие возможности для роста и развития вместе с компанией, чтобы они могли реализовать свой потенциал. Мы хотим привлечь самых талантливых и увлеченных людей присоединиться к нашему бизнесу.</p>
           <p class="career-text">Большой дом стремится к равной оплате труда и обеспечению полноценной и обогащающей карьеры для наших сотрудников независимо от пола, религии, сексуальной ориентации, инвалидности или любых других защищенных характеристик.</p>
         </div>
-        <div class="col-lg-5">
+        <div class="col-lg-5" data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
           <div class="career-image-placeholder"></div>
         </div>
       </div>
@@ -150,7 +152,7 @@
   <section class="contact-section" id="contact">
     <div class="container">
       <div class="row g-4 g-lg-5">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="700">
           <h2 class="section-title">Свяжитесь с нами</h2>
           <p class="section-subtitle mb-4">Оставьте заявку и мы перезвоним вам в ближайшее время.</p>
           <div class="contact-form-card">
@@ -161,7 +163,7 @@
             <div id="formStatus" class="text-center mt-3" style="font-size: 14px;"></div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
           <div class="contact-info-block">
             <h3 class="contact-info-title">Контактная информация</h3>
             <div class="contact-info-item"><div class="contact-info-icon"><i class="bi bi-envelope"></i></div><div><strong>Email</strong><span><a href="mailto:info@bighouse.ru">info@bighouse.ru</a></span></div></div>
@@ -174,16 +176,16 @@
     </div>
   </section>
   <!-- Карта -->
-  <section class="map-section" id="map">
+  <section class="map-section" id="map" data-aos="fade-up" data-aos-duration="800">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.8!2d30.3141!3d59.9339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32db1e1b8!2z0YPQuy4g0JHQvtC70YzRiNCw0Y8g0JzQvtGA0YHQutCw0Y8sIDE4!5e0!3m2!1sru!2sru!4v1700000000000!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта офиса"></iframe>
   </section>
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="row g-4">
-        <div class="col-lg-4 col-md-6"><div class="footer-logo"><img src="img/logo.svg" alt="Большой Дом" class="footer-logo-img"></div><p>Динамичная многопрофильная проектно-строительная компания. Строим загородные коттеджи под ключ с 2010 года.</p></div>
-        <div class="col-lg-4 col-md-6"><h5>Контакты</h5><p><i class="bi bi-envelope me-2"></i><a href="mailto:info@bighouse.ru">info@bighouse.ru</a><br><i class="bi bi-telephone me-2"></i><a href="tel:+78121112233">+7 (812) 111-22-33</a><br><i class="bi bi-geo-alt me-2"></i>Санкт-Петербург, ул. Большая Морская, 18</p></div>
-        <div class="col-lg-4 col-md-6"><h5>Навигация</h5><p><a href="#home">Главная</a><br><a href="#about">О нас</a><br><a href="#projects">Проекты</a><br><a href="#career">Карьера</a><br><a href="#contact">Контакты</a></p></div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="600"><div class="footer-logo"><img src="img/logo.svg" alt="Большой Дом" class="footer-logo-img"></div><p>Динамичная многопрофильная проектно-строительная компания. Строим загородные коттеджи под ключ с 2010 года.</p></div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150"><h5>Контакты</h5><p><i class="bi bi-envelope me-2"></i><a href="mailto:info@bighouse.ru">info@bighouse.ru</a><br><i class="bi bi-telephone me-2"></i><a href="tel:+78121112233">+7 (812) 111-22-33</a><br><i class="bi bi-geo-alt me-2"></i>Санкт-Петербург, ул. Большая Морская, 18</p></div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300"><h5>Навигация</h5><p><a href="#home">Главная</a><br><a href="#about">О нас</a><br><a href="#projects">Проекты</a><br><a href="#career">Карьера</a><br><a href="#contact">Контакты</a></p></div>
       </div>
       <div class="footer-bottom">© 2026 Большой Дом. Все права защищены.</div>
     </div>
@@ -204,6 +206,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/email.min.js"></script>
+  <script src="js/aos.js"></script>
   <script src="js/config.js"></script>
   <script src="js/main.js"></script>
 </body>
