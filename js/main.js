@@ -66,6 +66,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+const phone = document.querySelector('.phone-mockup');
+
+phone.addEventListener('mouseenter', () => {
+  // Сохраняем текущую позицию из анимации
+  const rect = phone.getBoundingClientRect();
+  const computedStyle = window.getComputedStyle(phone);
+  const transform = computedStyle.transform;
+  
+  // Применяем transition
+  phone.style.transition = 'transform 0.6s ease';
+  
+  // Отключаем анимацию, но сохраняем текущее положение
+  phone.style.animation = 'none';
+  
+  // Небольшая задержка для применения изменений
+  setTimeout(() => {
+    phone.style.transform = 'perspective(500px) translate3d(-10px, -10px, 0px) rotate3d(1, 1, 1, -45deg)';
+  }, 10);
+});
+
+phone.addEventListener('mouseleave', () => {
+  phone.style.transition = 'transform 0.6s ease';
+  phone.style.transform = ''; // Возвращаем к исходному состоянию
+  
+  // Возвращаем анимацию после завершения перехода
+  setTimeout(() => {
+    if (!phone.matches(':hover')) {
+      phone.style.transition = 'none';
+      phone.style.animation = 'float 4s ease-in-out 1.5s infinite';
+      phone.style.animationDelay = '0.4s';
+    }
+  }, 600);
+});
+
 
 // ============================================================
 // Отправка формы — основная секция

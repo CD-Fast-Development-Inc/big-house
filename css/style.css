@@ -138,7 +138,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
@@ -556,7 +556,7 @@ img {
 .turnkey-steps {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 36px;
@@ -590,6 +590,7 @@ img {
   color: rgba(255, 255, 255, 0.4);
   font-size: 24px;
   line-height: 1;
+  margin-top: 12px;
 }
 
 /* Карьера */

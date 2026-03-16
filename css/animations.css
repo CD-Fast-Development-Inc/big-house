@@ -59,6 +59,7 @@
 .phone-mockup {
   animation: fadeInRight 1s ease-out both, float 4s ease-in-out 1.5s infinite;
   animation-delay: 0.4s;
+  transition: all 0.6s ease;
 }
 
 /* Header — плавное появление */
